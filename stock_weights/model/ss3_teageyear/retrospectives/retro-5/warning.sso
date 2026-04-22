@@ -1,0 +1,12 @@
+Warning 1 Adjustment: basis for HCR anchor was not set; setting to 2 to match default before 3.30.24
+Warning 2 : There is timevary biology and the legacy approach to benchmark calculations is being used; user should be aware of possible impacts to benchmark results
+Warning 3 : There is timevary biology, so the flag for timevary_bio_4SRR must be set to 0 (old default) or 1 (new improved) in starter.ss
+Warning 4 Adjustment:  last main recdev: 2024 to retro_yr: 2019 reset 
+Note 1 Information: Age-based retention will use the same empirical wtatage for discarded and retained fish for fleet: 8
+Warning 5 Adjustment: setting positive forecast relF for bycatch fleet: 4
+Warning 6 Adjustment: setting positive forecast relF for bycatch fleet: 4
+Warning 7 : Final gradient: 0.00251603 is larger than final_conv: 0.0001
+Warning 8 Adjustment: setting positive forecast relF for bycatch fleet: 4
+Note 2 Information: A revised protocol for the Fcast_yr specification is available and recommended.
+Warning 9 Adjustment: setting positive forecast relF for bycatch fleet: 4
+ 9 warnings  and 2 notes 
