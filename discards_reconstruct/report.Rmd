@@ -129,16 +129,45 @@ include_graphics("report/landingsrec12_model_diagnostics.png")
 include_graphics("report/landingsrec_model_diagnostics.png")
 ```
 
+Table 2: Analysis of deviance table from a likelihood ratio test comparing the GLM models Landings and LandingsR12.
+
+```
+Analysis of Deviance Table
+
+Model 1: discards ~ log(landings)
+Model 2: discards ~ log(landings) + log(rec1) + log(rec2)
+  Resid. Df Resid. Dev Df Deviance    F Pr(>F)
+1        21       2.68
+2        19       2.20  2    0.478 2.13   0.15
+```
+
+Table 3: Analysis of deviance table from a likelihood ratio test comparing the GLM models Landings, and LandingsR.
+
+```
+Analysis of Deviance Table
+
+Model 1: discards ~ log(landings)
+Model 2: discards ~ log(landings) + log(rec)
+  Resid. Df Resid. Dev Df Deviance    F Pr(>F)
+1        21       2.68
+2        20       2.07  1    0.609 6.15  0.022
+```
+
+
 ## Model predictions
 
-Predictions, or more correctly calculations for the method based on the average ratio, are presented in Figure \@ref(fig:discardspredictions). All options predict discards are large values prior to 2001, consistent with expectations. All models using recruitment as covariate predict very large discard values in the 1978-1982 period, higher than when employing only landings as predictor. Recruitment appears to be linked but only explains a relatively reduced part of the total variance.
+Predictions, or more correctly calculations for the method based on the average ratio, are presented in Figure \@ref(fig:discardspredictions), and then compared with the landings series in Figure \@ref(fig:discardspredictionslandings). All options predict discards that are larger than those observed from 2002, consistent with expectations as total catches were higher. All models using recruitment as a covariate predict very large discard values in the 1978-1982 period, higher than when employing only landings as predictor. Recruitment appears to be linked but only explains a relatively reduced part of the total variance (tables 2 and 3).
 
 ```{r discardspredictions, fig.cap="Predicted total discards (in weight) from the different models fitted to the observed discards series. The dots show the observed discards."}
 include_graphics("report/discards_predictions.png")
 ```
 
-\FloatBarrier
+```{r discardspredictionslandings, fig.cap="Predicted total discards (in weight) from the different models fitted to the observed discards series, and compared to the landings (black line). The dots show the observed discards."}
+include_graphics("report/discards_predictions_landings.png")
+```
 
+\FloatBarrier
+66
 ## Effect on stock assessment and reference points
 
 The Stock Synthesis 3 model runs with the different discard reconstructions show similar trajectories for spawning stock biomass (SSB) and fishing mortality (Fbar), with some differences in the earlier years of the time series (Figures \@ref(fig:ssbs) and \@ref(fig:fbars)). The runs with the GLM-based reconstructions, particularly the one including recruitment, show higher SSB values in the earlier years compared to the run using the average ratio, which is consistent with the higher discard estimates predicted by those models. The WGNSSK 2025 run, which does not include reconstructed discards, shows lower SSB values in the earlier years, as expected.
@@ -185,7 +214,13 @@ The additional catches introduced by the reconstructed discard series lead to la
 
 In contrast with the methodology used by the AAP model, by incorporating discards explicitely in the system equation, these approaches do not fully integrate into the assessment model. Variance related to this process is also left out of the assessment model calculations. Integrating this step into the assessment model would be the preferable approach to consider in a future benchmark.
 
+The availability of fish that could be discarded is not only dependent on the number of fish in those ages, but also on their length, as minimum landings size is the main reason for discarding. Changes in mean weight, and length, over the period for which discards are being reconstructed are well known (ICES, 2025). So using only recruitment strength as a predictor of availability could overestimate discards in the period where fish grew larger than the minimum landing size much earlier. This could explain partly the large differences between the GLM with recruitment and AAP in certain years, as AAP included the stock weight-at-age in its calculations.
+
+A discussion on the choice of model, or procedure, took place during the 2026 sesssion of WGNSSK. The agreement was to employ only landings as predictor, given that properlym accounting for availability would require a more complex modelling exercise, while differences in estimates were minor. The GLm linking discards and landings was preferred, as it includes a dynamic element that the simple discard ratio calculation lacks. The proposal is to run this model and assemble a new discard time series that will not be rerun as the dataset grows, unless a completely new reconstruction model is considered, or the process is included in the stock assessment itself.
+
 # References
+
+ICES (2025). Working Group on the Assessment of Demersal Stocks in the North Sea and Skagerrak (WGNSSK). ICES Scientific Reports. Report. https://doi.org/10.17895/ices.pub.29085995.v4
 
 R Core Team (2024). R: A language and environment for statistical computing. R Foundation for Statistical Computing.
 

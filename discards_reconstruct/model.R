@@ -13,8 +13,8 @@ library(msy)
 library(ss3om)
 source("utilities.R")
 
-# LOAD glm results
-load("model/discards.rda")
+# RUN discards models
+source("model_discards.R")
 
 # model_ss3.R - RUN SS3 model, retrospectives and jitters
 
@@ -53,11 +53,3 @@ path <- file.path("model", paste(mod, ss3, sep="_"))
 
 source('model_ss3.R')
 source('model_refpts.R')
-
-# modR new SS3: D ~ L + R
-# ss3 <- "logistic_dnorm"
-# mod <- "modR"
-# path <- file.path("model", paste(mod, ss3, sep="_"))
-# 
-# source('model_ss3.R')
-# source('model_refpts.R')

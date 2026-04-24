@@ -16,7 +16,7 @@ library(ggplotFL)
 load('boot/data/output_sol.27.4_wgnnsk-2025.rda')
 
 # SET years
-ys <- 1959:2024
+ys <- 1957:2024
 dys <- 2002:2024
 
 # COMPUTE discards from ratio 2001:2006
@@ -34,9 +34,9 @@ data <- data.table(
   # D
   discards=c(discards(stk)[, ac(ys)]),
   # Age 1 abundance
-  rec1=c(rec(stk)[, ac(ys - 1)]),
+  rec1=c(NA, rec(stk)[, ac(ys[-seq(1)] - 1)]),
   # Age 2 abundance
-  rec2=c(rec(stk)[, ac(ys - 2)]),
+  rec2=c(NA, NA, rec(stk)[, ac(ys[-seq(2)] - 2)]),
   # Prop. discards age 1
   pd1=c((discards.n(stk) * discards.wt(stk))['1', ac(ys)] / discards(stk)[, ac(ys)]),
   # Prop. discards age 2

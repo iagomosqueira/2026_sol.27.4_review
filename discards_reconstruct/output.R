@@ -28,3 +28,9 @@ refpts <- lapply(dirs, function(x) readRDS(file.path(x, "refpts.rds")))
 
 # SAVE
 save(runs, outs, refpts, file="output/output.rda")
+
+# LOAD predictions
+load("model/discards.rda")
+
+# EXTRACT new discards time series
+save(res, file="output/output.rda")
