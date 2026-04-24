@@ -84,6 +84,12 @@ include_graphics(c("report/landings_model_diagnostics.png",
 include_graphics("report/discards_predictions.png")
 ```
 
+## Results - Discards predictions + landings
+
+```{r}
+include_graphics("report/discards_predictions_landings.png")
+```
+
 ## Results - SSB and F
 
 ```{r, out.width="45%", fig.show='hold'}

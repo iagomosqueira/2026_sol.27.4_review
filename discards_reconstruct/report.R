@@ -115,6 +115,21 @@ ggplot() +
   labs(x= "", y = "Total discards (t)", colour = "")
 dev.off()
 
+taf.png("discards_predictions_landings.png")
+ggplot() +
+  # dots for special model (shown in every facet)
+  geom_point(
+    data = preds[model == "Discards"],
+    aes(x = year, y = ifelse(data == 0, NA, data)),
+    alpha=0.6) +
+  # lines for all other models (faceted)
+  geom_line(
+    data = preds[model != "Discards"],
+    aes(x = year, y = data, group = model, colour=model)) +
+  labs(x= "", y = "Total discards and landings (t)", colour = "") +
+  geom_line(data=res, aes(x=year, y=landings))
+dev.off()
+
 # --- output
 
 # LOAD output
