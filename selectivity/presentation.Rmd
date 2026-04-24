@@ -126,32 +126,32 @@ include_graphics("report/selex/comp_agefit__multi-fleet_comparison.png")
 \tiny
 
 ```
-| # LO | HI | INIT | PRIOR | PR_SD | PR_type | PHASE | env-var | use_dev | dev_mnyr | dev_mxyr | dev_PH | Block | Blk_Fxn | parm_name |  |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| # 1 |  |  | Fleet | AgeSelex |  |  |  |  |  |  |  |  |  |  |  |
-| 0 | 20 | 2.23076 | 10 | 4 | 0.5 | 5 | 0 | 23 | 2009 | 2021 | 5 | 0 | 0 | Age_inflection_Fleet(1) |  |
-| -4 | 30 | 0.710311 | 1 | 4 | 0.5 | 6 | 0 | 23 | 2009 | 2021 | 6 | 0 | 0 | Age_95%width_Fleet(1) |  |
-| # 2 |  |  | BTS | AgeSelex |  |  |  |  |  |  |  |  |  |  |  |
-| 0 | 9.9 | 1.2036 | 2 | 1 | 0.05 | 4 | 0 | 0 | 0 | 0 | 0.5 | 0 | 0 | Age_DblN_peak_BTS(2) |  |
-| -5 | 3 | -3.79741 | -5 | 1 | 0.05 | 4 | 0 | 0 | 0 | 0 | 0.5 | 0 | 0 | Age_DblN_top_logit_BTS(2) |  |
-| -4 | 12 | -1.44672 | 8.4 | 1 | 0.05 | 4 | 0 | 0 | 0 | 0 | 0.5 | 0 | 0 | Age_DblN_ascend_se_BTS(2) |  |
-| -10 | 6 | -3.47201 | 3 | 1 | 0.05 | -4 | 0 | 0 | 0 | 0 | 0.5 | 0 | 0 | Age_DblN_descend_se_BTS(2) |  |
-| -15 | 5 | -3.38987 | 0 | 1 | 0.05 | -4 | 0 | 0 | 0 | 0 | 0.5 | 0 | 0 | Age_DblN_start_logit_BTS(2) |  |
-| -5 | 15 | 1.63717 | 0.9 | 1 | 0.05 | -4 | 0 | 0 | 0 | 0 | 0.5 | 0 | 0 | Age_DblN_end_logit_BTS(2) |  |
-| # 3 | COAST | AgeSelex |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 0 | 9.9 | 4.32E-05 | 2 | 1 | 0.05 | -4 | 0 | 0 | 0 | 0 | 0.5 | 0 | 0 | Age_DblN_peak_COAST(3) |  |
-| -15 | 3 | -12.5387 | -5 | 1 | 0.05 | 4 | 0 | 0 | 0 | 0 | 0.5 | 0 | 0 | Age_DblN_top_logit_COAST(3) |  |
-| -30 | 12 | -20.9735 | 5.9 | 1 | 0.05 | 4 | 0 | 0 | 0 | 0 | 0.5 | 0 | 0 | Age_DblN_ascend_se_COAST(3) |  |
-| -2 | 6 | 1.82926 | 0.3 | 1 | 0.05 | 4 | 0 | 0 | 0 | 0 | 0.5 | 0 | 0 | Age_DblN_descend_se_COAST(3) |  |
-| -15 | 5 | 1.31219 | 0.8 | 1 | 0.05 | 4 | 0 | 0 | 0 | 0 | 0.5 | 0 | 0 | Age_DblN_start_logit_COAST(3) |  |
-| -15 | 5 | -11.8416 | 0 | 1 | 0.05 | 4 | 0 | 0 | 0 | 0 | 0.5 | 0 | 0 | Age_DblN_end_logit_COAST(3) |  |
-| # 4 | Discards | AgeSelex |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 0 | 9.9 | 1.19921 | 2 | 1 | 0.05 | 4 | 0 | 0 | 0 | 0 | 0.5 | 0 | 0 | Age_DblN_peak_Discards(4) |  |
-| -15 | 3 | -10.277 | -5 | 1 | 0.05 | 4 | 0 | 0 | 0 | 0 | 0.5 | 0 | 0 | Age_DblN_top_logit_Discards(4) |  |
-| -4 | 12 | -3.59095 | 0.3 | 1 | 0.05 | 4 | 0 | 0 | 0 | 0 | 0.5 | 0 | 0 | Age_DblN_ascend_se_Discards(4) |  |
-| -2 | 6 | 1.956 | 1 | 1 | 0.05 | 4 | 0 | 0 | 0 | 0 | 0.5 | 0 | 0 | Age_DblN_descend_se_Discards(4) |  |
-| -15 | 5 | -14.6525 | 0 | 1 | 0.05 | 4 | 0 | 0 | 0 | 0 | 0.5 | 0 | 0 | Age_DblN_start_logit_Discards(4) |  |
-| -5 | 5 | -2.14541 | 0.2 | 1 | 0.05 | 4 | 0 | 0 | 0 | 0 | 0.5 | 0 | 0 | Age_DblN_end_logit_Discards(4) |  |
+# LO  HI    INIT      PRIOR  PR_SD  PR_type  PHASE  env-var  use_dev  dev_mnyr  dev_mxyr  dev_PH  Block  BFxn  parm_name
+---   ---   ---       ---    ---    ---      ---    ---      ---      ---       ---       ---     ---    ---   ---                               ---
+# 1 Fleet  AgeSelex
+0     20   2.23076   10     4      0.5      5      0        23       2009      2021      5       0      0      Age_inflection_Fleet(1)             
+-4    30   0.710311  1      4      0.5      6      0        23       2009      2021      6       0      0      Age_95%width_Fleet(1)               
+# 2 BTS AgeSelex                                                                                                               
+0     9.9 1.2036     2      1      0.05     4      0        0        0         0         0.5     0      0      Age_DblN_peak_BTS(2)                
+-5    3    -3.79741  -5     1      0.05     4      0        0        0         0         0.5     0      0      Age_DblN_top_logit_BTS(2)           
+-4    12   -1.44672  8.4    1      0.05     4      0        0        0         0         0.5     0      0      Age_DblN_ascend_se_BTS(2)           
+-10   6    -3.47201  3      1      0.05     -4     0        0        0         0         0.5     0      0      Age_DblN_descend_se_BTS(2)          
+-15   5    -3.38987  0      1      0.05      4     0        0        0         0         0.5     0      0      Age_DblN_start_logit_BTS(2)         
+-5    15   1.63717   0.9    1      0.05     -4     0        0        0         0         0.5     0      0      Age_DblN_end_logit_BTS(2)           
+# 3 COAST AgeSelex                                                                                                                                
+0     9.9  4.32E-05  2      1      0.05     -4     0        0        0         0         0.5     0      0      Age_DblN_peak_COAST(3)              
+-15   3    -12.5387  -5     1      0.05     4      0        0        0         0         0.5     0      0      Age_DblN_top_logit_COAST(3)         
+-30   12   -20.9735  5.9    1      0.05     4      0        0        0         0         0.5     0      0      Age_DblN_ascend_se_COAST(3)         
+-2    6    1.82926   0.3    1      0.05     4      0        0        0         0         0.5     0      0      Age_DblN_descend_se_COAST(3)        
+-15   5    1.31219   0.8    1      0.05     4      0        0        0         0         0.5     0      0      Age_DblN_start_logit_COAST(3)       
+-15   5    -11.8416  0      1      0.05     4      0        0        0         0         0.5     0      0      Age_DblN_end_logit_COAST(3)         
+# 4 Discards AgeSelex                                                                                                                                
+0     9.9  1.19921   2      1      0.05     4      0        0        0         0         0.5     0      0      Age_DblN_peak_Discards(4)           
+-15   3    -10.277   -5     1      0.05     4      0        0        0         0         0.5     0      0      Age_DblN_top_logit_Discards(4)      
+-4    12   -3.59095  0.3    1      0.05     4      0        0        0         0         0.5     0      0      Age_DblN_ascend_se_Discards(4)      
+-2    6    1.956     1      1      0.05     4      0        0        0         0         0.5     0      0      Age_DblN_descend_se_Discards(4)     
+-15   5    -14.6525  0      1      0.05     4      0        0        0         0         0.5     0      0      Age_DblN_start_logit_Discards(4)    
+-5    5    -2.14541  0.2    1      0.05     4      0        0        0         0         0.5     0      0      Age_DblN_end_logit_Discards(4)      
 ```
 
 ## Estimated parameters
@@ -182,4 +182,3 @@ kable(subset(table_parcounts$table, Count > 0))
 - Fit not dramatically altered
 - Are recent fishery changes in need of another block?
 - What is happening with BTS?
-
