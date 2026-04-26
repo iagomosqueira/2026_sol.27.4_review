@@ -9,6 +9,7 @@
 
 print(path)
 
+# LOAD FLStock with model estimates
 run <- readsol274(path)$run
 
 # SETTINGS 
@@ -85,9 +86,11 @@ Fpa <- Fmsy
 lFmsy <- min(Fmsy, srsim2$Refs2["lanF", "Medlower"])
 
 # Landings for Fmsy
-lan <-   data.table(srsim2$rbp)[abs(Ftarget - Fmsy) == min(abs(Ftarget - Fmsy)) & variable == 'Landings', p50]
+lan <-   data.table(srsim2$rbp)[abs(Ftarget - Fmsy) ==
+  min(abs(Ftarget - Fmsy)) & variable == 'Landings', p50]
 
-lFmsy <- data.table(srsim2$rbp)[variable == 'Landings' & p50 >= lan * 0.95, Ftarget][1]
+lFmsy <- data.table(srsim2$rbp)[variable == 'Landings' &
+  p50 >= lan * 0.95, Ftarget][1]
 
 # uFMSY
 uFmsy <- min(Fpa, srsim2$Refs2["lanF", "Medupper"])
@@ -99,5 +102,3 @@ nrefpts <- FLPar(Btrigger=Btrigger, Fmsy=Fmsy, Blim=Blim, Bpa=Bpa,
 
 # SAVE
 saveRDS(nrefpts, file=file.path(path, "refpts.rds"))
-# save(nrefpts, srfit1, srsim1, srsim2, srsim3,
-#   file=file.path(path, "eqsim.rda"), compress="xz")

@@ -101,6 +101,10 @@ All analyses were conducted in R using the glm function from base R (R Core Team
 
 The Stock synthesis model employed in WGNSSK 2025 has been rerun with three of the different discard reconstructions, those using the average ratio, the GLM based on landings, and obne based on landings and age 1 and 2 recruits. The reconstructed values from 1959 to 2001 were assigned as total catch and bycatch for the discards fleet (4) in the SS3 model data file. The models employing recruits with 1 and 2 year lags provided predictions from 1959 only, so the same time frame was employed for the discards ratio method. The eqsim-based algorithm used to compute reference points during the benchmark was rerun for these three assessment results. The assessment results from last year were also used to recalculate the reference points, to use it as a base case with the same length of data as the others.
 
+### Calculation of ICES reference points
+
+The methodology employed follows that applied in the 2024 benchnmark for the stock (ICES, 2024). The stock-recruiment relationship was classified as type 5 according to ICES guidelines (ICES, 2017), and $B_{lim}$ was computed as the average of the four lowest observed spawning biomass values. The *eqsim* algorithm was again applied to compute reference points, using a bounded segmented regression model, with the inflexion point set to Blim. The last year of recruitment estimates, in this case 2023, has been excluded, as its estimate of considered very uncertain and Stock Synthesis does not fir recuritment deviances in the final year. Future mean weights at age have been taken as an average over the last five years, as a decreasing pattern exists in the sampled stock weights over the last 10 years. Natural mortality and maturity are naturally set at the same level as in all years of the assessment. The exploitation pattern at age was also taken as an average of the last five years, while the future discards ratio was set as an average of the last three years. Code employed for the calculation is attached as Appendix A.
+
 # Results
 
 ## Model diagnostics
@@ -220,8 +224,18 @@ A discussion on the choice of model, or procedure, took place during the 2026 se
 
 # References
 
+ICES (2024). Benchmark workshop on selected flatfish stocks (WKBFLATFISH). ICES Scientific Reports. 6:30. 729 pp. https://doi.org/10.17895/ices.pub.25471987
+
 ICES (2025). Working Group on the Assessment of Demersal Stocks in the North Sea and Skagerrak (WGNSSK). ICES Scientific Reports. Report. https://doi.org/10.17895/ices.pub.29085995.v4
 
 R Core Team (2024). R: A language and environment for statistical computing. R Foundation for Statistical Computing.
 
 Zuur, A. F., Ieno, E. N., & Smith, G. M. (2007). Analysing Ecological Data. Springer.
+
+# (APPENDIX) Appendices {-} 
+
+## Appendix A: Code for the calculation of ICES reference points
+
+```{r, eval=FALSE, echo=TRUE, code=readLines("model_refpts.R")}
+```
+
